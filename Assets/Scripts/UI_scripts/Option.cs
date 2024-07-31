@@ -1,16 +1,46 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Option : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject menuPanel; 
+    [SerializeField] private GameObject option;
+    public void P_Close_Options()
     {
-        
+        menuPanel.SetActive(true);
+        option.SetActive(false);
     }
+    // настройка графики 
+    /*
+    *
+    */
+    // настройка звука 
+    // MUSIC
+    [SerializeField] private Slider volumeSlider; 
+    private void Start()
+    {
+       float savedVolume = PlayerPrefs.GetFloat("Songs", 0.5f);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = savedVolume;
+            volumeSlider.onValueChanged.AddListener(SetSong);
+            SetVolume(savedVolume); 
+        }
     }
+    private void SetSong(float value)
+    {
+        SetVolume(value);
+        PlayerPrefs.SetFloat("Songs", value);
+    }
+    private void SetVolume(float value)
+    {
+        foreach (var audioSource in Progress.Inst.audioMassive)
+        {
+            if (audioSource != null)
+            {
+                audioSource.volume = value;
+            }
+        }
+    }
+    // VFX
 }

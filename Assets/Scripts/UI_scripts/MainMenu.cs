@@ -1,65 +1,25 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject panelOption;
-    [SerializeField] private Slider volumeSlider; 
-    private bool statusOption;
-    void Start()
-    {
-        float savedVolume = PlayerPrefs.GetFloat("Songs", 0.5f);
+    // анимацийа камеры
+    /* 
+    *сначало попробуем через аниматор
+    */
 
-        if (volumeSlider != null)
-        {
-            volumeSlider.value = savedVolume;
-            volumeSlider.onValueChanged.AddListener(SetSong);
-        }
-        SetVolume(savedVolume);
-    }
-    private void Update()
-    {
-        // открывем настройки esc
-        if(Input.GetKey(KeyCode.Escape) && statusOption)
-        {
-            Close_Options();
-            statusOption = false;
-        }
-    }
-    // для кнопок
-    public void Start_Game()
-    {
-        SceneManager.LoadScene(1);
+    // реализацийа кнопок меню
+    [SerializeField] private GameObject menuPanel; 
+    [SerializeField] private GameObject selectBioms;
+    [SerializeField] private GameObject option;
 
-    }
-    public void Exit_Game()
+    public void P_Open_SelectBioms()
     {
-        Application.Quit();
+        menuPanel.SetActive(false);
+        selectBioms.SetActive(true);        
     }
-    public void Open_Options()
+    public void P_Open_Options()
     {
-        panelOption.SetActive(true);
-        statusOption = true;
-    }
-    public void Close_Options()
-    {
-        panelOption.SetActive(false);
-        statusOption = false;
-    }
-    // для настройки звука
-    private void SetSong(float value)
-    {
-        SetVolume(value);
-        PlayerPrefs.SetFloat("Songs", value);
-    }
-    private void SetVolume(float value)
-    {
-        foreach (var audioSource in Progress.Inst.audioMassive)
-        {
-            if (audioSource != null)
-            {
-                audioSource.volume = value;
-            }
-        }
+        menuPanel.SetActive(false);
+        option.SetActive(true);
     }
 }

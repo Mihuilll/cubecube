@@ -16,7 +16,7 @@ public class Option : MonoBehaviour
     // настройка звука 
     // MUSIC
     [SerializeField] private Slider volumeSlider; 
-    void Start()
+    private void Start()
     {
        float savedVolume = PlayerPrefs.GetFloat("Songs", 0.5f);
 
@@ -24,8 +24,8 @@ public class Option : MonoBehaviour
         {
             volumeSlider.value = savedVolume;
             volumeSlider.onValueChanged.AddListener(SetSong);
+            SetVolume(savedVolume); 
         }
-        SetVolume(savedVolume); 
     }
     private void SetSong(float value)
     {

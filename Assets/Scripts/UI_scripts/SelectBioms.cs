@@ -25,7 +25,7 @@ public class SelectBioms : MonoBehaviour
     }
     public void P_Close_SelectBioms()
     {
-        biomsPanel.SetActive(true);
-        menuPanel.SetActive(false);
+        biomsPanel.SetActive(false);
+        menuPanel.SetActive(true);
     }
 }

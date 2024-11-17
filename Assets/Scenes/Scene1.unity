@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 144781466}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.02, y: 3.21, z: -8.93}
+  m_LocalPosition: {x: -9, y: 3, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -400,9 +400,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 15
-  speedMove: 5
+  maxSpeed: 5
+  acceleration: 10
   jumpButton: {fileID: 608075693}
   joystick: {fileID: 896481730}
+  cameraParentTransform: {fileID: 1437969063}
 --- !u!1001 &237075717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1084,19 +1086,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.965926
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.2588186
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1116,7 +1118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2929252283123773939, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
       propertyPath: m_Name
@@ -1289,7 +1291,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 1, g: 1, b: 0.4509804, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1311,10 +1313,10 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: -15
+  near clip plane: 0.01
   far clip plane: 50
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 20
   m_Depth: 0
   m_CullingMask:
@@ -1340,8 +1342,8 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: -17, y: 2, z: -16}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -15, y: -2, z: -15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1437969063}
@@ -1549,11 +1551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be19ae74c7a79264fad7880bf3d649a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleController: {fileID: 1016125153}
-  minBounds: {x: -111, y: -10, z: 111}
-  maxBounds: {x: 111, y: 1, z: -111}
-  boundsColor: {r: 1, g: 0, b: 0, a: 1}
+  minHeight: -5
   player: {fileID: 144781471}
+  particleController: {fileID: 1016125153}
 --- !u!1001 &1194883719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2125,7 +2125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1437969063}
-  - component: {fileID: 1437969064}
+  - component: {fileID: 1437969065}
   m_Layer: 0
   m_Name: Transfor camer
   m_TagString: Untagged
@@ -2149,7 +2149,7 @@ Transform:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1437969064
+--- !u!114 &1437969065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2158,13 +2158,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1437969062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc7f84234c4d7041917df6cf3d387a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bcd7598261567e4cbfb534e66d6b69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 1
+  mouseSensitivity: 0.1
   rotationSpeed: 5
   inertiaDamping: 0.95
   joystick: {fileID: 896481730}
+  player: {fileID: 144781471}
+  minHeight: 5
+  maxHeight: 90
+  heightSmoothSpeed: 0.5
+  cameraWindowHeight: 10
 --- !u!1 &1584971500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,7 +2206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -20.149923, y: 109.25183}
+  m_AnchoredPosition: {x: -20.149923, y: 109.25195}
   m_SizeDelta: {x: 101.63403, y: 91.47058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584971502

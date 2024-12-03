@@ -1,13 +1,7 @@
 using UnityEngine;
 
 public class MainMenu : MonoBehaviour
-{
-    // анимацийа камеры
-    /* 
-    *сначало попробуем через аниматор
-    */
-
-    // реализацийа кнопок меню
+{ 
     [SerializeField] private GameObject menuPanel; 
     [SerializeField] private GameObject selectBioms;
     [SerializeField] private GameObject option;

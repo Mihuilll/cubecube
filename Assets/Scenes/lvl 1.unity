@@ -570,12 +570,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332046272}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 857615235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &332046276
 MonoBehaviour:
@@ -815,11 +815,11 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23758268, y: -0.7918906, z: 0.47611633, w: -0.29962826}
-  m_LocalPosition: {x: 19.49, y: 25.29, z: -18.28}
+  m_LocalPosition: {x: 19.49, y: 25.290003, z: -18.279999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 857615235}
   m_LocalEulerAnglesHint: {x: -322.288, y: 117.646, z: -56.751}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -854,7 +854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734192143}
   m_Layer: 0
-  m_Name: tp
+  m_Name: Check Point 1
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,12 +868,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734192142}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7, y: 8, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1016125152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &792817597
 PrefabInstance:
@@ -937,6 +937,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4423081331597742962, guid: cb9428f89f0dc7141b003cf6e901df4e, type: 3}
   m_PrefabInstance: {fileID: 792817597}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &857615234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 857615235}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &857615235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857615234}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1437969063}
+  - {fileID: 1016125152}
+  - {fileID: 705507995}
+  - {fileID: 332046275}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &882249947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,7 +1224,7 @@ GameObject:
   - component: {fileID: 950449807}
   - component: {fileID: 950449806}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Panel Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1268,7 +1303,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
   m_Layer: 0
-  m_Name: camera
+  m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,7 +1536,7 @@ GameObject:
   - component: {fileID: 1016125153}
   - component: {fileID: 1016125154}
   m_Layer: 0
-  m_Name: tp - Controller
+  m_Name: Teleport Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1515,12 +1550,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016125151}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 734192143}
+  m_Father: {fileID: 857615235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1016125153
 MonoBehaviour:
@@ -1534,11 +1570,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36e68472a34ed047a5a75e981650c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoints:
-  - {fileID: 734192142}
   particlePrefab: {fileID: 6314530503876186578, guid: fa6c59715f63e384d8c2d6a49d6898b7, type: 3}
   explosionForce: 5
-  particleCount: 10
+  timeDestroy: 1
+  particleCount: 2
+  checkpoints:
+  - {fileID: 734192142}
+  currentCheckpointIndex: 0
 --- !u!114 &1016125154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,7 +1792,7 @@ GameObject:
   - component: {fileID: 1238780256}
   - component: {fileID: 1238780260}
   m_Layer: 0
-  m_Name: Sun
+  m_Name: End Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1860,6 +1898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597a18e9f25fb42429668c787ea980b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexScene: 0
 --- !u!1001 &1294650795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2127,7 +2166,7 @@ GameObject:
   - component: {fileID: 1437969063}
   - component: {fileID: 1437969065}
   m_Layer: 0
-  m_Name: Transfor camer
+  m_Name: Camera Comtroller
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2141,13 +2180,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437969062}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 857615235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1437969065
 MonoBehaviour:
@@ -2161,7 +2200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcd7598261567e4cbfb534e66d6b69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 0.1
+  mouseSensitivity: 0.7
   rotationSpeed: 5
   inertiaDamping: 0.95
   joystick: {fileID: 896481730}
@@ -2930,11 +2969,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1437969063}
-  - {fileID: 332046275}
-  - {fileID: 705507995}
+  - {fileID: 857615235}
   - {fileID: 2055689829}
   - {fileID: 882249948}
   - {fileID: 144781471}
-  - {fileID: 1016125152}
-  - {fileID: 734192143}

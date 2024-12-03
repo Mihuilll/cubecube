@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-// for correct operation (button index == panelLvl index)
-// дл коректной работы (индекс button == индексу panelLvl)
+
 public class SelectBioms : MonoBehaviour
 {
     public GameObject biomsPanel;
@@ -11,10 +10,9 @@ public class SelectBioms : MonoBehaviour
 
     private void Start()
     {
-        // Назначаем обработчик события для каждой кнопки
         for (int i = 0; i < buttons.Length; i++)
         {
-            int index = i; // Создаем копию переменной для замыкания
+            int index = i; 
             buttons[i].onClick.AddListener(() => P_Open_SelectLvl(index));
         }
     }

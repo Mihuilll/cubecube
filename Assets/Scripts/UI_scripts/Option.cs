@@ -8,13 +8,7 @@ public class Option : MonoBehaviour
     {
         menuPanel.SetActive(true);
         option.SetActive(false);
-    }
-    // настройка графики 
-    /*
-    *
-    */
-    // настройка звука 
-    // MUSIC
+    } 
     [SerializeField] private Slider volumeSlider; 
     private void Start()
     {

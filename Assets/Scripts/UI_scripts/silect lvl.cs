@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-// for correct operation (button index == panelLvl index)
-// дл коректной работы (индекс button == индексу nameScene)
+using UnityEngine.SceneManagement; 
 public class silectlvl : MonoBehaviour
 {
     public GameObject biomsPanel;

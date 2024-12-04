@@ -1,5 +1,0 @@
-E:/ds/Work programm/Unity/my/mixa/cubecube/.utmp/RelWithDebInfo/3g5q91d2/arm64-v8a/CMakeFiles/edit_cache.dir
-E:/ds/Work programm/Unity/my/mixa/cubecube/.utmp/RelWithDebInfo/3g5q91d2/arm64-v8a/CMakeFiles/rebuild_cache.dir
-E:/ds/Work programm/Unity/my/mixa/cubecube/.utmp/RelWithDebInfo/3g5q91d2/arm64-v8a/GameActivity/CMakeFiles/game.dir
-E:/ds/Work programm/Unity/my/mixa/cubecube/.utmp/RelWithDebInfo/3g5q91d2/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
-E:/ds/Work programm/Unity/my/mixa/cubecube/.utmp/RelWithDebInfo/3g5q91d2/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

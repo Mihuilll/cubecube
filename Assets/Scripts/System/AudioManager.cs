@@ -11,9 +11,12 @@ public class AudioManager : MonoBehaviour
     public AudioSource eventSource;           // Телепортация, победа, взаимодействие с объектами
     public AudioSource playerSource;          // Звуки игрока (передвижение, прыжок)
 
+    public AudioClip music;
+    public AudioClip sounds;
+
     void Awake()
     {
-        // Singleton pattern
+        // Singleton 
         if (instance == null)
         {
             instance = this;
@@ -24,9 +27,10 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void ff15()
+    private void Start()
     {
-
+        PlayBackgroundMusic(music);
+        PlayAmbientEffect(sounds);
     }
     // Фоновые эффекты (например, дождь)
     public void PlayBackgroundMusic(AudioClip clip)
@@ -41,9 +45,12 @@ public class AudioManager : MonoBehaviour
     // Фоновые эффекты (например, дождь)
     public void PlayAmbientEffect(AudioClip clip)
     {
-        ambientSource.clip = clip;
-        ambientSource.loop = true;
-        ambientSource.Play();
+        if (ambientSource.clip != clip)
+        {
+            ambientSource.clip = clip;
+            ambientSource.loop = true;
+            ambientSource.Play();
+        }
     }
     // Звуки интерфейса (UI)
     public void PlayUISound(AudioClip clip)

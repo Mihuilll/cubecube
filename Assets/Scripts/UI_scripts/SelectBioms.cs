@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectBioms : MonoBehaviour
+public class SelectBioms : SoundPolomorf
 {
     public GameObject biomsPanel;
     public GameObject menuPanel;
@@ -18,11 +18,15 @@ public class SelectBioms : MonoBehaviour
     }
     public void P_Open_SelectLvl(int index)
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(false);
         panelLvl[0].SetActive(true);
     }
     public void P_Close_SelectBioms()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(false);
         menuPanel.SetActive(true);
     }

@@ -2799,6 +2799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc96587a2dd38874898b763781a1d809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 17a7e64747fb72a4f8b7c7c9cf349137, type: 3}
   sceneMenu: Main Manu
   pauseMenu: {fileID: 950449804}
 --- !u!1 &2131460678

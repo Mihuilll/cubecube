@@ -60,7 +60,6 @@ public class AudioSettings : SoundPolomorf
         AudioManager.instance.playerSource.volume = value;
         PlayerPrefs.SetFloat("OtherVolume", value);
     }
-
     private void OnApplicationQuit()
     {
         // Сохраняем настройки при выходе

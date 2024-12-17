@@ -23,4 +23,14 @@ public class MainMenu : SoundPolomorf
         menuPanel.SetActive(false);
         option.SetActive(true);
     }
+
+    public void P_Exit_Option()
+    {
+        // ¬оспроизведение звука UI перед изменением меню
+        AudioManager.instance.PlayUISound(clip);
+
+        option.SetActive(false);
+        menuPanel.SetActive(true);
+    }
+
 }

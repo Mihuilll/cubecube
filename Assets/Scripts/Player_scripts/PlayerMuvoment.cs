@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController characterController;
 
     private float currentSpeed = 0f;
+    public AudioClip sounds;                   
 
     public Transform cameraParentTransform; // Родитель камеры, который вращается
 
@@ -98,6 +99,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
+            AudioManager.instance.PlayPlayerSound(sounds);
+
             gravityForce = jumpPower;
         }
     }

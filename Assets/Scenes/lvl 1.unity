@@ -533,6 +533,7 @@ MonoBehaviour:
   acceleration: 10
   jumpButton: {fileID: 608075693}
   joystick: {fileID: 896481730}
+  sounds: {fileID: 8300000, guid: 7608c87b70e3ca0499f4d7d54957f775, type: 3}
   cameraParentTransform: {fileID: 1437969063}
 --- !u!1001 &237075717
 PrefabInstance:
@@ -1950,6 +1951,7 @@ MonoBehaviour:
   minHeight: -5
   player: {fileID: 144781471}
   particleController: {fileID: 1016125153}
+  sounds: {fileID: 8300000, guid: 5b314d588a48f644d802627332f83aeb, type: 3}
 --- !u!1001 &1194883719
 PrefabInstance:
   m_ObjectHideFlags: 0

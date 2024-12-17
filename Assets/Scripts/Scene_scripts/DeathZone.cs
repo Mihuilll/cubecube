@@ -6,16 +6,21 @@ public class DeathZoneChecker : MonoBehaviour
     public Transform player;
     public TeleportWithEffect particleController;
 
+    public AudioClip sounds; 
+
     private void Update()
     { 
         if (player.position.y < minHeight)
         {
+            AudioManager.instance.PlayEventSound(sounds);
+
             HandlePlayerOutOfBounds();
         }
     }
 
     private void HandlePlayerOutOfBounds()
     {
+
         particleController.CreateExplosion(player.position);
 
         TeleportPlayer();

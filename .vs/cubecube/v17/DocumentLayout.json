@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Unit\\cubecube\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\scene_scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scene_scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\system\\progressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\system\\progressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\player_scripts\\playermuvoment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player_scripts\\playermuvoment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|C:\\Unit\\cubecube\\assets\\scripts\\ui_scripts\\silect lvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui_scripts\\silect lvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|C:\\Unit\\cubecube\\assets\\scripts\\system\\skinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\system\\skinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\ui_scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui_scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|C:\\Unit\\cubecube\\assets\\scripts\\system\\progressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\system\\progressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +26,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "silect lvl.cs",
+              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\silect lvl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI_scripts\\silect lvl.cs",
+              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\silect lvl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI_scripts\\silect lvl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T21:22:23.955Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ProgressManager.cs",
               "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\ProgressManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\System\\ProgressManager.cs",
@@ -39,45 +53,33 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T22:20:10.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "silect lvl.cs",
-              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\silect lvl.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI_scripts\\silect lvl.cs",
-              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\silect lvl.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI_scripts\\silect lvl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T21:22:23.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SkinManager.cs",
-              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\SkinManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\System\\SkinManager.cs",
-              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\SkinManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\System\\SkinManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:57:14.422Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Finish.cs",
-              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Title": "PlayerMuvoment.cs",
+              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\Player_scripts\\PlayerMuvoment.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player_scripts\\PlayerMuvoment.cs",
+              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\Player_scripts\\PlayerMuvoment.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player_scripts\\PlayerMuvoment.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAUwLMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T12:34:47.983Z",
+              "WhenOpened": "2024-12-17T23:05:23.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T22:56:39.378Z",
               "EditorCaption": ""
             }
           ]

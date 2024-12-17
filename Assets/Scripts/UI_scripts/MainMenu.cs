@@ -5,7 +5,7 @@ public class MainMenu : SoundPolomorf
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject selectBioms;
     [SerializeField] private GameObject option;
-    
+    [SerializeField] private GameObject skisns;
     public void P_Open_SelectBioms()
     {
         // ¬оспроизведение звука UI перед изменением меню
@@ -32,5 +32,7 @@ public class MainMenu : SoundPolomorf
         option.SetActive(false);
         menuPanel.SetActive(true);
     }
+
+
 
 }

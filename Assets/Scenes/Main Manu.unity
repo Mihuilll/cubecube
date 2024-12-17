@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eae405dad2728474a83b6686387e4c50, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ec638d6c84611140a0fd3a6665842fc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1426,6 +1426,11 @@ MonoBehaviour:
   - {fileID: 1607822661}
   skisns: {fileID: 1530882898}
   menuPanel: {fileID: 162998638}
+  skinColors:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
 --- !u!4 &160172367
 Transform:
   m_ObjectHideFlags: 0
@@ -6992,7 +6997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1530882899
 RectTransform:
   m_ObjectHideFlags: 0

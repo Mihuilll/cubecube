@@ -11,12 +11,9 @@ public class AudioManager : MonoBehaviour
     public AudioSource eventSource;           // Телепортация, победа, взаимодействие с объектами
     public AudioSource playerSource;          // Звуки игрока (передвижение, прыжок)
 
-    public AudioClip music;
-    public AudioClip sounds;
-
     void Awake()
     {
-        // Singleton 
+        // Singleton
         if (instance == null)
         {
             instance = this;
@@ -27,11 +24,8 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void Start()
-    {
-        PlayBackgroundMusic(music);
-        PlayAmbientEffect(sounds);
-    }
+
+
     // Фоновые эффекты (например, дождь)
     public void PlayBackgroundMusic(AudioClip clip)
     {

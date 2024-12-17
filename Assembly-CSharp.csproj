@@ -80,6 +80,7 @@
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player_scripts\PlayerMuvoment.cs" />
+    <Compile Include="Assets\Scripts\System\Background.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />

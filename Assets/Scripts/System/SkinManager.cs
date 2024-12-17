@@ -12,6 +12,11 @@ public class SkinManager : SoundPolomorf
     // Массив цветов для скинов
     public Color[] skinColors = { Color.white, Color.red, Color.green, Color.blue };
 
+    private void Start()
+    {
+        UpdateSkins();
+    }
+
     private void UpdateSkins()
     {
         // Загружаем выбранный скин
@@ -35,7 +40,12 @@ public class SkinManager : SoundPolomorf
             bool unlocked = PlayerPrefs.GetInt($"Skin_Biome_{i}_Unlocked", i == 0 ? 1 : 0) == 1;
             skinButtons[i].interactable = unlocked;
 
-            skinButtons[i].GetComponentInChildren<Text>().text = unlocked ? $"Скин {i + 1}" : "Заблокирован";
+            // Устанавливаем текст кнопки в зависимости от доступности скина
+            Text buttonText = skinButtons[i].GetComponentInChildren<Text>();
+            if (buttonText != null)
+            {
+                buttonText.text = unlocked ? $"Скин {i + 1}" : "Заблокирован";
+            }
         }
     }
 

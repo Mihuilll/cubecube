@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Luse
+  - 'Ice '
+  - 'Trampoline '
+  - Ice
+  - Trampoline
   layers:
   - Default
   - TransparentFX

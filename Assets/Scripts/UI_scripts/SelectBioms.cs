@@ -21,7 +21,7 @@ public class SelectBioms : SoundPolomorf
         AudioManager.instance.PlayUISound(clip);
 
         biomsPanel.SetActive(false);
-        panelLvl[0].SetActive(true);
+        panelLvl[index].SetActive(true);
     }
     public void P_Close_SelectBioms()
     {

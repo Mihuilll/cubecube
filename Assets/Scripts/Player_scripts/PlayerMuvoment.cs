@@ -21,14 +21,26 @@ public class PlayerMovement : MonoBehaviour
 
     private Renderer playerRenderer; // Компонент для изменения цвета игрока
 
+    // Для льда и батута
+    private bool isOnIce = false;  // Флаг, определяющий, на льду ли игрок
+    private bool isOnTrampoline = false;  // Флаг, определяющий, на батуте ли игрок
+
+    public float iceFriction = 0.2f;  // Коэффициент скольжения на льду
+    public float trampolineForce = 15f;  // Сила отскока от батута
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         playerRenderer = GetComponent<Renderer>();
 
+        // Проверка на null для кнопки прыжка
         if (jumpButton != null)
         {
             jumpButton.onClick.AddListener(Jump);
+        }
+        else
+        {
+            Debug.LogWarning("Jump button is not assigned.");
         }
 
         // Применяем цвет скина
@@ -37,7 +49,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        CharacterMove();
+        // Проверка на null для джойстика перед использованием
+        if (joystick != null)
+        {
+            CharacterMove();
+        }
+        else
+        {
+            Debug.LogWarning("Joystick is not assigned.");
+        }
+
         ApplyGravity();
     }
 
@@ -50,16 +71,22 @@ public class PlayerMovement : MonoBehaviour
 
         Color skinColor = new Color(r, g, b);
 
-        // Применяем цвет к материалу игрока
+        // Применяем цвет к материалу игрока, проверяем на null
         if (playerRenderer != null)
         {
             playerRenderer.material.color = skinColor;
             Debug.Log("Цвет игрока изменён на: " + skinColor);
         }
+        else
+        {
+            Debug.LogWarning("PlayerRenderer is not assigned.");
+        }
     }
 
     private void CharacterMove()
     {
+        if (joystick == null) return;
+
         Vector3 inputDirection = new Vector3(joystick.Horizontal, 0, joystick.Vertical);
 
         if (inputDirection.magnitude > 1)
@@ -74,8 +101,18 @@ public class PlayerMovement : MonoBehaviour
             inputDirection = currentCameraRotation * inputDirection;
         }
 
-        float targetSpeed = inputDirection.magnitude * maxSpeed;
-        currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
+        // Если игрок на льду, уменьшаем его замедление
+        if (isOnIce)
+        {
+            // Уменьшаем скорость на льду, чтобы игрок скользил
+            currentSpeed = Mathf.Lerp(currentSpeed, maxSpeed * iceFriction, acceleration * Time.deltaTime);
+        }
+        else
+        {
+            // Обычное движение
+            float targetSpeed = inputDirection.magnitude * maxSpeed;
+            currentSpeed = Mathf.Lerp(currentSpeed, targetSpeed, acceleration * Time.deltaTime);
+        }
 
         moveVector.x = inputDirection.x * currentSpeed;
         moveVector.z = inputDirection.z * currentSpeed;
@@ -107,12 +144,51 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // Прыжок через кнопку
     public void Jump()
     {
         if (characterController.isGrounded)
         {
-            AudioManager.instance.PlayPlayerSound(sounds);
+            if (AudioManager.instance != null && sounds != null)
+            {
+                AudioManager.instance.PlayPlayerSound(sounds);
+            }
             gravityForce = jumpPower;
+        }
+    }
+
+    // Обработка столкновений с объектами (trigger)
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ice"))
+        {
+            isOnIce = true;  // Игрок на льду, активируем скольжение
+        }
+        else if (other.CompareTag("Trampoline"))
+        {
+            isOnTrampoline = true;
+            BounceOnTrampoline();  // Прыжок от батута
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Ice"))
+        {
+            isOnIce = false;  // Игрок покидает лед, восстанавливаем нормальное движение
+        }
+        else if (other.CompareTag("Trampoline"))
+        {
+            isOnTrampoline = false;  // Игрок покидает батут
+        }
+    }
+
+    // Отскок от батута
+    void BounceOnTrampoline()
+    {
+        if (characterController.isGrounded && isOnTrampoline)
+        {
+            gravityForce = trampolineForce;  // При столкновении с батутом, применяем силу отскока
         }
     }
 }

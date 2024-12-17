@@ -74,10 +74,12 @@
     <Compile Include="Assets\Scripts\UI_scripts\SelectBioms.cs" />
     <Compile Include="Assets\Scripts\Scene_scripts\Splashes.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Scripts\System\ProgressManager.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\System\SkinManager.cs" />
     <Compile Include="Assets\Scripts\UI_scripts\PauseMenu.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\Scripts\System\ClearPlayerPrefs.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Defoult unity\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player_scripts\PlayerMuvoment.cs" />

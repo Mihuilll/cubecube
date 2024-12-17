@@ -1,25 +1,36 @@
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : SoundPolomorf
 {
-    // Р°РЅРёРјР°С†РёР№Р° РєР°РјРµСЂС‹
-    /* 
-    *СЃРЅР°С‡Р°Р»Рѕ РїРѕРїСЂРѕР±СѓРµРј С‡РµСЂРµР· Р°РЅРёРјР°С‚РѕСЂ
-    */
-
-    // СЂРµР°Р»РёР·Р°С†РёР№Р° РєРЅРѕРїРѕРє РјРµРЅСЋ
-    [SerializeField] private GameObject menuPanel; 
+    [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject selectBioms;
     [SerializeField] private GameObject option;
-
+    
     public void P_Open_SelectBioms()
     {
+        // Воспроизведение звука UI перед изменением меню
+        AudioManager.instance.PlayUISound(clip);
+
         menuPanel.SetActive(false);
-        selectBioms.SetActive(true);        
+        selectBioms.SetActive(true);
     }
+
     public void P_Open_Options()
     {
+        // Воспроизведение звука UI перед изменением меню
+        AudioManager.instance.PlayUISound(clip);
+
         menuPanel.SetActive(false);
         option.SetActive(true);
     }
+
+    public void P_Exit_Option()
+    {
+        // Воспроизведение звука UI перед изменением меню
+        AudioManager.instance.PlayUISound(clip);
+
+        option.SetActive(false);
+        menuPanel.SetActive(true);
+    }
+
 }

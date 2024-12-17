@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 using UnityEngine;
+
 [AddComponentMenu("Miscellaneous/README Info Note")]
 public class Comment : MonoBehaviour
 {
@@ -8,9 +9,7 @@ public class Comment : MonoBehaviour
 
     void Awake()
     {
-        comment = null;
-       
-        // Assuming you want to destroy this script component
+        comment = null; 
         Destroy(this);
     }
 }

@@ -1,9 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-// for correct operation (button index == panelLvl index)
-// дл коректной работы (индекс button == индексу nameScene)
-public class silectlvl : MonoBehaviour
+using UnityEngine.SceneManagement; 
+public class silectlvl : SoundPolomorf
 {
     public GameObject biomsPanel;
     public GameObject LvlPanel;
@@ -21,11 +19,15 @@ public class silectlvl : MonoBehaviour
     }
     public void P_Open_Lvl(int index)
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(false);
         SceneManager.LoadScene(nameScene[index]);
     }
     public void P_Close_SelectLvl()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(true);
         LvlPanel.SetActive(false);
     }

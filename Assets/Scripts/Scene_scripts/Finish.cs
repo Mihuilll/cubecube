@@ -16,38 +16,20 @@ public class Finish : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Сохраняем текущий уровень как завершённый
-            PlayerPrefs.SetInt($"Level_{biomeIndex}_{currentLevel}_Completed", 1);
-            PlayerPrefs.Save();
+            // Завершаем текущий уровень в ProgressManager
+            ProgressManager.Instance.SetLevelCompleted(biomeIndex, currentLevel, true);
+
+            Debug.Log($"Уровень {currentLevel} в биоме {biomeIndex} завершён.");
 
             // Проверяем, завершены ли все уровни в биоме
-            if (IsBiomeCompleted())
+            if (ProgressManager.Instance.IsBiomeCompleted(biomeIndex))
             {
-                UnlockBiomeSkin();
+                Debug.Log("Все уровни биома завершены!");
+                ProgressManager.Instance.UnlockBiomeSkin(biomeIndex);
             }
 
             // Переход на следующую сцену
             SceneManager.LoadScene(indexScene);
         }
-    }
-
-    private bool IsBiomeCompleted()
-    {
-        // Проверяем все уровни биома
-        for (int i = 0; i < totalLevelsInBiome; i++)
-        {
-            if (PlayerPrefs.GetInt($"Level_{biomeIndex}_{i}_Completed", 0) == 0)
-            {
-                return false; // Найден незавершённый уровень
-            }
-        }
-        return true; // Все уровни биома завершены
-    }
-
-    private void UnlockBiomeSkin()
-    {
-        PlayerPrefs.SetInt($"Skin_Biome_{biomeIndex}_Unlocked", 1);
-        PlayerPrefs.Save();
-        Debug.Log($"Скин для биома {biomeIndex} разблокирован!");
     }
 }

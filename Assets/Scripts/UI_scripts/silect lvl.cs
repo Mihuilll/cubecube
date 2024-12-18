@@ -9,11 +9,13 @@ public class silectlvl : SoundPolomorf
 
     public Button[] levelButtons; // Кнопки для выбора уровней
     public string[] nameScene;    // Названия сцен для уровней
+    public Image[] levelButtonImages; // Массив изображений кнопок (для изменения прозрачности)
 
     private void Start()
     {
         UpdateLevelButtons();
 
+        // Добавляем слушателей на кнопки
         for (int i = 0; i < levelButtons.Length; i++)
         {
             int index = i; // Создаем копию переменной для замыкания
@@ -23,20 +25,45 @@ public class silectlvl : SoundPolomorf
 
     void UpdateLevelButtons()
     {
+        int biomeIndex = ProgressManager.Instance.currentBiomeIndex; // Получаем текущий биом
+        int totalLevelsInBiome = ProgressManager.Instance.GetTotalLevelsInBiome(biomeIndex); // Получаем количество уровней для текущего биома
+
         // Активируем кнопки уровней на основе прогресса
-        for (int i = 0; i < levelButtons.Length; i++)
+        for (int i = 0; i < totalLevelsInBiome; i++) // Используем totalLevelsInBiome вместо levelButtons.Length
         {
+            bool isLevelCompleted = ProgressManager.Instance.IsLevelCompleted(biomeIndex, i); // Проверка, завершён ли уровень
+
+            // Если это первый уровень, он всегда доступен
             if (i == 0)
             {
-                // Первый уровень всегда открыт
                 levelButtons[i].interactable = true;
+                SetButtonTransparency(i, 1f); // Убираем полупрозрачность для первого уровня
             }
             else
             {
-                // Проверяем, пройден ли предыдущий уровень
-                int previousLevel = PlayerPrefs.GetInt($"Level_{i}_Completed", 0);
-                levelButtons[i].interactable = previousLevel == 1;
+                // Проверяем, был ли завершён предыдущий уровень
+                bool isLevelUnlocked = ProgressManager.Instance.IsLevelCompleted(biomeIndex, i - 1);
+                levelButtons[i].interactable = isLevelUnlocked;
+                SetButtonTransparency(i, isLevelUnlocked ? 1f : 0.5f); // Полупрозрачность для заблокированных уровней
             }
+
+            // Для последнего уровня — всегда открыт, если все предыдущие пройдены
+            if (i == totalLevelsInBiome - 1)
+            {
+                levelButtons[i].interactable = true;
+                SetButtonTransparency(i, 1f); // Убираем полупрозрачность для последнего уровня
+            }
+        }
+    }
+
+    // Функция для изменения прозрачности кнопки
+    private void SetButtonTransparency(int index, float alpha)
+    {
+        if (levelButtonImages != null && levelButtonImages.Length > index)
+        {
+            Color buttonColor = levelButtonImages[index].color;
+            buttonColor.a = alpha; // Изменяем альфа-канал (прозрачность)
+            levelButtonImages[index].color = buttonColor;
         }
     }
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkinManager : MonoBehaviour
+public class SkinManager : SoundPolomorf
 {
     public Button[] skinButtons; // Кнопки выбора скинов
     private int selectedSkin = 0; // Выбранный скин
@@ -50,6 +50,8 @@ public class SkinManager : MonoBehaviour
 
     public void SelectSkin(int index)
     {
+        AudioManager.instance.PlayUISound(clip);
+
         selectedSkin = index;
         PlayerPrefs.SetInt("SelectedSkin", selectedSkin);
 
@@ -66,6 +68,8 @@ public class SkinManager : MonoBehaviour
 
     public void P_Open_Skisns()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         menuPanel.SetActive(false);
         skisns.SetActive(true);
         UpdateSkins();
@@ -73,6 +77,8 @@ public class SkinManager : MonoBehaviour
 
     public void P_Exit_Skisns()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         skisns.SetActive(false);
         menuPanel.SetActive(true);
     }

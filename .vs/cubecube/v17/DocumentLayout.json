@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Unit\\cubecube\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|C:\\Unit\\cubecube\\assets\\scripts\\ui_scripts\\silect lvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\ui_scripts\\silect lvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui_scripts\\silect lvl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\system\\progressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\system\\progressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\ui_scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui_scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\system\\skinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\system\\soundpolomorf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\system\\soundpolomorf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|C:\\Unit\\cubecube\\assets\\scripts\\system\\skinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\system\\skinmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|c:\\unit\\cubecube\\assets\\scripts\\scene_scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8834D39-1D80-D55B-91FC-E141D487591F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scene_scripts\\finish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,48 +36,46 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI_scripts\\silect lvl.cs",
               "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\silect lvl.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI_scripts\\silect lvl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAcwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T21:22:23.955Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Finish.cs",
-              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scene_scripts\\Finish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T12:00:27.743Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-12-18T17:18:21.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProgressManager.cs",
-              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\ProgressManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\System\\ProgressManager.cs",
-              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\ProgressManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\System\\ProgressManager.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAmwAcAAAAwAAAAAAAAAA==",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI_scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T11:58:12.243Z",
+              "WhenOpened": "2024-12-18T17:14:28.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SoundPolomorf.cs",
+              "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\SoundPolomorf.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\System\\SoundPolomorf.cs",
+              "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\SoundPolomorf.cs",
+              "RelativeToolTip": "Assets\\Scripts\\System\\SoundPolomorf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:14:15.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SkinManager.cs",
               "DocumentMoniker": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\SkinManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\System\\SkinManager.cs",
               "ToolTip": "C:\\Unit\\cubecube\\Assets\\Scripts\\System\\SkinManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\System\\SkinManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-18T13:42:44.079Z",
               "EditorCaption": ""

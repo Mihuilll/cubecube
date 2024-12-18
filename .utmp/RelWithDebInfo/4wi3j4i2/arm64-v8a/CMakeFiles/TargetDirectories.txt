@@ -1,0 +1,5 @@
+C:/Unit/cubecube/.utmp/RelWithDebInfo/4wi3j4i2/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Unit/cubecube/.utmp/RelWithDebInfo/4wi3j4i2/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Unit/cubecube/.utmp/RelWithDebInfo/4wi3j4i2/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Unit/cubecube/.utmp/RelWithDebInfo/4wi3j4i2/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Unit/cubecube/.utmp/RelWithDebInfo/4wi3j4i2/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class silectlvl : MonoBehaviour
+public class silectlvl : SoundPolomorf
 {
     public int biomeIndex; // Уникальный индекс биома для этого скрипта
     public GameObject biomsPanel; // Панель выбора биома
@@ -60,12 +60,16 @@ public class silectlvl : MonoBehaviour
 
     public void P_Open_Lvl(int index)
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(false);
         SceneManager.LoadScene(nameScene[index]);
     }
 
     public void P_Close_SelectLvl()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(true);
         foreach (var panel in levelPanels)
         {
@@ -75,6 +79,8 @@ public class silectlvl : MonoBehaviour
 
     public void P_Open_BiomePanel()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         biomsPanel.SetActive(false);
         foreach (var panel in levelPanels)
         {
@@ -87,6 +93,8 @@ public class silectlvl : MonoBehaviour
 
     public void P_Exit_BiomePanel()
     {
+        AudioManager.instance.PlayUISound(clip);
+
         levelPanels[biomeIndex].SetActive(false);
         biomsPanel.SetActive(true);
     }

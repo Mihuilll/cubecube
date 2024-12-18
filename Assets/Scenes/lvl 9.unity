@@ -2563,7 +2563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcd7598261567e4cbfb534e66d6b69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 0.7
   rotationSpeed: 5
   inertiaDamping: 0.95
   joystick: {fileID: 896481730}

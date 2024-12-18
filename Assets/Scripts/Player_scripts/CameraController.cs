@@ -6,7 +6,7 @@ using UnityEngine.UI; // Подключаем пространство имен 
 public class CameraController : MonoBehaviour
 {
     // Переменные для вращения камеры
-    public float mouseSensitivity = 0.1f; // Скорость изменения угла
+    private float mouseSensitivity = 0.2f; // Скорость изменения угла
     public float rotationSpeed = 5f; // Скорость вращения
     public float inertiaDamping = 0.95f; // Коэффициент затухания инерции
     public FixedJoystick joystick; // Ссылка на фиксированный джойстик из Joystick Pack

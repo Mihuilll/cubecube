@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SkinManager : SoundPolomorf
+public class SkinManager : MonoBehaviour
 {
     public Button[] skinButtons; // Кнопки выбора скинов
     private int selectedSkin = 0; // Выбранный скин
@@ -23,7 +23,6 @@ public class SkinManager : SoundPolomorf
         selectedSkin = PlayerPrefs.GetInt("SelectedSkin", 0);
 
         UpdateSkinButtons();
-        ApplySkin(selectedSkin);
 
         for (int i = 0; i < skinButtons.Length; i++)
         {
@@ -39,7 +38,7 @@ public class SkinManager : SoundPolomorf
         {
             bool unlocked = PlayerPrefs.GetInt($"Skin_Biome_{i}_Unlocked", i == 0 ? 1 : 0) == 1;
             skinButtons[i].interactable = unlocked;
-
+            Debug.Log(unlocked);
             // Устанавливаем текст кнопки в зависимости от доступности скина
             Text buttonText = skinButtons[i].GetComponentInChildren<Text>();
             if (buttonText != null)
@@ -61,19 +60,12 @@ public class SkinManager : SoundPolomorf
 
         PlayerPrefs.Save();
 
-        ApplySkin(index);
         Debug.Log($"Скин {index} выбран!");
     }
 
-    void ApplySkin(int index)
-    {
-        Debug.Log($"Применён скин {index}");
-    }
 
     public void P_Open_Skisns()
     {
-        AudioManager.instance.PlayUISound(clip);
-
         menuPanel.SetActive(false);
         skisns.SetActive(true);
         UpdateSkins();
@@ -81,8 +73,6 @@ public class SkinManager : SoundPolomorf
 
     public void P_Exit_Skisns()
     {
-        AudioManager.instance.PlayUISound(clip);
-
         skisns.SetActive(false);
         menuPanel.SetActive(true);
     }

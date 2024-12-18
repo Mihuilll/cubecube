@@ -2114,10 +2114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597a18e9f25fb42429668c787ea980b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexScene: 2
-  currentLevel: 0
-  biomeIndex: 1
-  totalLevelsInBiome: 3
+  nextSceneIndex: 2
+  currentLevelIndex: 0
+  biomeIndex: 0
 --- !u!1 &1360018613
 GameObject:
   m_ObjectHideFlags: 0

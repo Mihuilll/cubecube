@@ -2,82 +2,92 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class silectlvl : SoundPolomorf
+public class silectlvl : MonoBehaviour
 {
-    public GameObject biomsPanel;
-    public GameObject LvlPanel;
-
+    public int biomeIndex; // Уникальный индекс биома для этого скрипта
+    public GameObject biomsPanel; // Панель выбора биома
+    public GameObject[] levelPanels; // Панели выбора уровней для каждого биома
     public Button[] levelButtons; // Кнопки для выбора уровней
-    public string[] nameScene;    // Названия сцен для уровней
-    public Image[] levelButtonImages; // Массив изображений кнопок (для изменения прозрачности)
+    public string[] nameScene; // Названия сцен для уровней
+    public Image[] levelButtonImages; // Изображения кнопок уровней
 
     private void Start()
     {
         UpdateLevelButtons();
+        AssignButtonListeners();
+    }
 
-        // Добавляем слушателей на кнопки
+    private void AssignButtonListeners()
+    {
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            int index = i; // Создаем копию переменной для замыкания
+            int index = i;
             levelButtons[i].onClick.AddListener(() => P_Open_Lvl(index));
         }
     }
 
-    void UpdateLevelButtons()
+    private void UpdateLevelButtons()
     {
-        int biomeIndex = ProgressManager.Instance.currentBiomeIndex; // Получаем текущий биом
-        int totalLevelsInBiome = ProgressManager.Instance.GetTotalLevelsInBiome(biomeIndex); // Получаем количество уровней для текущего биома
+        int totalLevels = ProgressManager.Instance.GetTotalLevelsInBiome(biomeIndex);
 
-        // Активируем кнопки уровней на основе прогресса
-        for (int i = 0; i < totalLevelsInBiome; i++) // Используем totalLevelsInBiome вместо levelButtons.Length
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            bool isLevelCompleted = ProgressManager.Instance.IsLevelCompleted(biomeIndex, i); // Проверка, завершён ли уровень
-
-            // Если это первый уровень, он всегда доступен
-            if (i == 0)
+            if (i < totalLevels)
             {
-                levelButtons[i].interactable = true;
-                SetButtonTransparency(i, 1f); // Убираем полупрозрачность для первого уровня
+                bool isCompleted = ProgressManager.Instance.IsLevelCompleted(biomeIndex, i);
+                bool isUnlocked = i == 0 || ProgressManager.Instance.IsLevelCompleted(biomeIndex, i - 1);
+
+                levelButtons[i].interactable = isUnlocked;
+                SetButtonTransparency(i, isUnlocked ? 1f : 0.5f);
             }
             else
             {
-                // Проверяем, был ли завершён предыдущий уровень
-                bool isLevelUnlocked = ProgressManager.Instance.IsLevelCompleted(biomeIndex, i - 1);
-                levelButtons[i].interactable = isLevelUnlocked;
-                SetButtonTransparency(i, isLevelUnlocked ? 1f : 0.5f); // Полупрозрачность для заблокированных уровней
-            }
-
-            // Для последнего уровня — всегда открыт, если все предыдущие пройдены
-            if (i == totalLevelsInBiome - 1)
-            {
-                levelButtons[i].interactable = true;
-                SetButtonTransparency(i, 1f); // Убираем полупрозрачность для последнего уровня
+                levelButtons[i].interactable = false;
+                SetButtonTransparency(i, 0.5f);
             }
         }
     }
 
-    // Функция для изменения прозрачности кнопки
     private void SetButtonTransparency(int index, float alpha)
     {
-        if (levelButtonImages != null && levelButtonImages.Length > index)
+        if (levelButtonImages != null && index < levelButtonImages.Length)
         {
-            Color buttonColor = levelButtonImages[index].color;
-            buttonColor.a = alpha; // Изменяем альфа-канал (прозрачность)
-            levelButtonImages[index].color = buttonColor;
+            Color color = levelButtonImages[index].color;
+            color.a = alpha;
+            levelButtonImages[index].color = color;
         }
     }
 
     public void P_Open_Lvl(int index)
     {
-        AudioManager.instance.PlayUISound(clip);
         biomsPanel.SetActive(false);
         SceneManager.LoadScene(nameScene[index]);
     }
 
     public void P_Close_SelectLvl()
     {
-        AudioManager.instance.PlayUISound(clip);
         biomsPanel.SetActive(true);
-        LvlPanel.SetActive(false);
+        foreach (var panel in levelPanels)
+        {
+            panel.SetActive(false);
+        }
+    }
+
+    public void P_Open_BiomePanel()
+    {
+        biomsPanel.SetActive(false);
+        foreach (var panel in levelPanels)
+        {
+            panel.SetActive(false);
+        }
+        levelPanels[biomeIndex].SetActive(true);
+        ProgressManager.Instance.SetCurrentBiomeIndex(biomeIndex);
+        UpdateLevelButtons();
+    }
+
+    public void P_Exit_BiomePanel()
+    {
+        levelPanels[biomeIndex].SetActive(false);
+        biomsPanel.SetActive(true);
     }
 }
